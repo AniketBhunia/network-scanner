@@ -8,4 +8,5 @@ This network-scanner does basically is , it scans the network and shows how many
 * Linux 
 * Scapy
 
-First we need to install scapy , So for that put ```pip install scapy``` in the terminal.
+# Steps and Definition
+* First we need to install scapy , So for that put ```pip install scapy``` in the terminal.
