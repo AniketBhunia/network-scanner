@@ -19,7 +19,7 @@ This network-scanner does basically is , it scans the network and shows how many
 The network scanner will send the ARP request indicating who has some specific IP address, let's say "192.168.1.1", the owner of that IP address ( the target ) will automatically respond saying that he is "192.168.1.1", with that response, the MAC address will also be included in the packet, this allows us to successfully retrieve all network users' IP and MAC addresses simultaneously when we send a broadcast packet ( sending a packet to all the devices in the network ).
 
 The arp example is like shown in the follwowing image:
-![alt text](https://www.thepythoncode.com/media/articles/building-network-scanner-using-scapy/hacker.jpg)
+![alt text]<img src = "https://www.thepythoncode.com/media/articles/building-network-scanner-using-scapy/hacker.jpg" width = '500'>
 
 So lets create packets:
 ```
