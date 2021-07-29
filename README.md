@@ -5,7 +5,7 @@
 This network-scanner does basically is , it scans the network and shows how many devices are connected to that network and what is their id address and mac address.
 
 # Requirments
-* Linux 
+* Linux OS
 * Scapy
 
 # Steps and Definition
