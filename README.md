@@ -1,14 +1,14 @@
 **Network-scanner** 
 
 
-# Working
+### Working
 This network-scanner does basically is , it scans the network and shows how many devices are connected to that network and what is their id address and mac address.
 
-# Requirments
+### Requirments
 * Linux OS
 * Scapy
 
-# Steps and Definition
+### Steps and Definition
 * First, we need to install scapy , So for that put ```pip install scapy``` in the terminal.
 
 * Second, we gonna need to import essential methods from scapy:
