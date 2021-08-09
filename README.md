@@ -46,4 +46,6 @@ print("IP" + " "*18+"MAC")
 for client in clients:
     print("{:16}    {}".format(client['ip'], client['mac']))
 ```
+To Run :
+``` python3 NetworkScanner.py ```
 
