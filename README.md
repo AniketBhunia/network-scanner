@@ -25,19 +25,22 @@ The arp example is like shown in the follwowing image:
 
 So lets create packets:
 ```
-target_ip = "192.168.1.1/24"
-# IP Address for the destination
-arp = ARP(pdst=target_ip)
-ether = Ether(dst="ff:ff:ff:ff:ff:ff")
-packet = ether/arp
+def scan_network(target_ip):                            
+   arp_request = scapy.ARP(pdst=target_ip)      # Creating ARP packets.
+   broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
+   packet = broadcast/arp_request 
+   ask_list = scapy.srp(packet, timeout = 3, verbose = False)[0]
+   
 ```
 Now we have created these packets, we need to send them using srp() function which sends and receives packets at layer 2, we set the timeout to 3 so the script won't get stuck:
-``` result = srp(packet, timeout=3)[0] ```
+```  ask_list = scapy.srp(packet, timeout = 3, verbose = False)[0] ```
 Result now is a list of pairs that is of the format (sent_packet, received_packet), let's iterate over them:
 ``` 
-clients = []
-for sent, received in result:
-     clients.append({'ip': received.psrc, 'mac': received.hwsrc})
+packet_list = []
+   for i in ask_list:
+        packet_dict = {"ip" : i[1].psrc, "mac" : i[1].hwsrc}
+        packet_list.append(packet_dict)
+        return(packet_list)
 ```
 
 Now lets Print:
