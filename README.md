@@ -59,3 +59,7 @@ def print_res(res):
 To Run :
 ``` python NetworkScanner.py -i IP address/24 ```
 
+### Ouput:
+<img width="691" alt="image" src="https://user-images.githubusercontent.com/72333107/171727373-e4e92099-a5ac-49ad-b741-3b0a0fe10969.png">
+
+
