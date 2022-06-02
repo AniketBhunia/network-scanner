@@ -13,16 +13,13 @@ def scan_network(target_ip):
    arp_request = scapy.ARP(pdst=target_ip)      # Creating ARP packets.
    broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
    packet = broadcast/arp_request 
-   ask_list = scapy.srp(packet, timeout = 3, verbose = False)[0]
+   ask_list = scapy.srp(packet, timeout = 1, verbose = False)[0]
    
    packet_list = []
    for i in ask_list:
         packet_dict = {"ip" : i[1].psrc, "mac" : i[1].hwsrc}
         packet_list.append(packet_dict)
         return(packet_list)
-
-print("Available devices in the network:")
-print("IP" + " "*18+"MAC")
 
 def print_result(res):
     print(""" __  _ ___ _____ _   _  __  ___ _  __    __   ___ __  __  _ __  _ ___ ___   
