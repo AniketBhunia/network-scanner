@@ -45,11 +45,17 @@ packet_list = []
 
 Now lets Print:
 ```
-print("Available devices in the network:")
-print("IP" + " "*18+"MAC")
-for client in clients:
-    print("{:16}    {}".format(client['ip'], client['mac']))
+def print_res(res):
+    print(""" __  _ ___ _____ _   _  __  ___ _  __    __   ___ __  __  _ __  _ ___ ___   
+|  \| | __|_   _| | | |/__\| _ \ |/ /  /' _/ / _//  \|  \| |  \| | __| _ \  
+| | ' | _|  | | | 'V' | \/ | v /   <   `._`.| \_| /\ | | ' | | ' | _|| v /  
+|_|\__|___| |_| !_/ \_!\__/|_|_\_|\_\  |___/ \__/_||_|_|\__|_|\__|___|_|_\  """)
+    print("=========================================")
+    print("IP\t\t\tMAC Address\n=========================================")
+    for n in res:
+        print(n["ip"] + "\t\t" + n["mac"])
+        
 ```
 To Run :
-``` python3 NetworkScanner.py ```
+``` python NetworkScanner.py -i IP address/24 ```
 
